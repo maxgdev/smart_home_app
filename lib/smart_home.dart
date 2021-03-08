@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:smart_home_app/top_icon.dart';
 import './bottom_widget.dart';
+import './central_widget.dart';
+import './top_icon.dart';
 
 class SmartHome extends StatelessWidget {
 
@@ -20,16 +23,23 @@ class SmartHome extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-              Icon(FontAwesomeIcons.wifi),
+              TopIcon(
+                height1: 55,
+                width1: 55,
+                color: Color(0xFFe6ebf2),
+                offsetB: Offset(-2, -2),
+                offsetW: Offset(2, 2),
+                bLevel: 3.0,
+                iconData: FontAwesomeIcons.wifi,
+                iconSize: 30.0,
+              ),
               Icon(FontAwesomeIcons.lightbulb),
               Icon(FontAwesomeIcons.home),
               Icon(FontAwesomeIcons.temperatureLow),
             ],)
           ),
           SizedBox(height: 20,),
-          Container(
-            child: Placeholder(),
-          ),
+          CentreComponent(),
           BottomComponent(statusText1: "Speed",  statusText2: "20Mb/s", statusIcon: FontAwesomeIcons.wifi),
           BottomComponent(statusText1: "Humidity",  statusText2: "60%", statusIcon: FontAwesomeIcons.leaf),
           SizedBox(height: 10),

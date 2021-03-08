@@ -12,7 +12,6 @@ void main() {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: _title,
-      // home: MyHomePage(title: _title),
       home: SmartHome(),
     );
   }
