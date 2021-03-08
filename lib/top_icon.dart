@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class TopIcon extends StatefulWidget {
   final Color color;
@@ -12,16 +11,16 @@ class TopIcon extends StatefulWidget {
   final double iconSize;
 
   const TopIcon(
-    {Key key,
-    this.color,
-    this.offsetW,
-    this.bLevel,
-    this.height1,
-    this.width1,
-    this.offsetB,
-    this.iconData,
-    this.iconSize})
-    : super(key: key);
+      {Key key,
+      this.color,
+      this.offsetW,
+      this.bLevel,
+      this.height1,
+      this.width1,
+      this.offsetB,
+      this.iconData,
+      this.iconSize})
+      : super(key: key);
 
   @override
   _TopIconState createState() => _TopIconState();
@@ -45,79 +44,79 @@ class _TopIconState extends State<TopIcon> {
   @override
   Widget build(BuildContext context) {
     return Listener(
-        onPointerUp: onPressedUp,
-        onPointerDown: onPressedDown,
-        child: isPressed
-            ? Container(
-                height: widget.height1,
-                width: widget.width1,
-                decoration: BoxDecoration(
-                    color: widget.color,
-                    borderRadius: BorderRadius.all(Radius.circular(20.0)),
-                    boxShadow: [
-                      BoxShadow(
-                          blurRadius: 5.0,
-                          offset: Offset(-3, -3),
-                          color: Colors.white.withOpacity(.7)),
-                      BoxShadow(
-                          blurRadius: 5.0,
-                          offset: Offset(3, 3),
-                          color: Colors.black.withOpacity(.15))
-                    ]),
-                child: Padding(
-                  padding: const EdgeInsets.all(3.0),
-                  child: Container(
-                    decoration: BoxDecoration(
-                        color: widget.color,
-                        borderRadius: BorderRadius.all(Radius.circular(20.0))),
-                    child: Padding(
-                      padding: const EdgeInsets.all(2.0),
-                      child: Container(
-                        decoration: BoxDecoration(
-                            color: widget.color,
-                            borderRadius: BorderRadius.all(Radius.circular(20.0)),
-                            boxShadow: [
-                              BoxShadow(
-                                  blurRadius: widget.bLevel,
-                                  offset: widget.offsetW,
-                                  color: Colors.white.withOpacity(.7)),
-                              BoxShadow(
-                                  blurRadius: widget.bLevel,
-                                  offset: widget.offsetB,
-                                  color: Colors.black.withOpacity(.25))
-                            ]),
-                        child: Icon(
-                          widget.iconData,
-                          size: widget.iconSize,
-                          color: Colors.blue,
-                        ),
+      onPointerUp: onPressedUp,
+      onPointerDown: onPressedDown,
+      child: isPressed
+          ? Container(
+              height: widget.height1,
+              width: widget.width1,
+              decoration: BoxDecoration(
+                  color: widget.color,
+                  borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                  boxShadow: [
+                    BoxShadow(
+                        blurRadius: 5.0,
+                        offset: Offset(-3, -3),
+                        color: Colors.white.withOpacity(.7)),
+                    BoxShadow(
+                        blurRadius: 5.0,
+                        offset: Offset(3, 3),
+                        color: Colors.black.withOpacity(.15))
+                  ]),
+              child: Padding(
+                padding: const EdgeInsets.all(3.0),
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: widget.color,
+                      borderRadius: BorderRadius.all(Radius.circular(20.0))),
+                  child: Padding(
+                    padding: const EdgeInsets.all(2.0),
+                    child: Container(
+                      decoration: BoxDecoration(
+                          color: widget.color,
+                          borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                          boxShadow: [
+                            BoxShadow(
+                                blurRadius: widget.bLevel,
+                                offset: widget.offsetW,
+                                color: Colors.white.withOpacity(.7)),
+                            BoxShadow(
+                                blurRadius: widget.bLevel,
+                                offset: widget.offsetB,
+                                color: Colors.black.withOpacity(.25))
+                          ]),
+                      child: Icon(
+                        widget.iconData,
+                        size: widget.iconSize,
+                        color: Colors.blue,
                       ),
                     ),
                   ),
                 ),
-              )
-            : Container(
-                height: widget.height1,
-                width: widget.width1,
-                decoration: BoxDecoration(
-                    color: Color(0xFFe6ebf2),
-                    borderRadius: BorderRadius.all(Radius.circular(20.0)),
-                    boxShadow: [
-                      BoxShadow(
-                          blurRadius: 5.0,
-                          offset: Offset(-3, -3),
-                          color: Colors.white.withOpacity(.7)),
-                      BoxShadow(
-                          blurRadius: 5.0,
-                          offset: Offset(3, 3),
-                          color: Colors.black.withOpacity(.15))
-                    ]),
-                child: Icon(
-                  widget.iconData,
-                  color: Colors.black.withOpacity(.5),
-                  size: 30.0,
-                ),
               ),
-      );
+            )
+          : Container(
+              height: widget.height1,
+              width: widget.width1,
+              decoration: BoxDecoration(
+                  color: Color(0xFFe6ebf2),
+                  borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                  boxShadow: [
+                    BoxShadow(
+                        blurRadius: 5.0,
+                        offset: Offset(-3, -3),
+                        color: Colors.white.withOpacity(.7)),
+                    BoxShadow(
+                        blurRadius: 5.0,
+                        offset: Offset(3, 3),
+                        color: Colors.black.withOpacity(.15))
+                  ]),
+              child: Icon(
+                widget.iconData,
+                color: Colors.black.withOpacity(.5),
+                size: 30.0,
+              ),
+            ),
+    );
   }
 }
