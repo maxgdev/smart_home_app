@@ -16,7 +16,12 @@ class SmartHome extends StatelessWidget {
       body: Column(
         children: [
           SizedBox( height: 20,),
-          Text("My Smart Home"),
+          Text("My Smart Home",
+            style: GoogleFonts.lato(
+              color: Colors.black.withOpacity(.6),
+              fontSize: 18.0,
+              fontWeight: FontWeight.w800)
+          ),
           SizedBox(height: 20,),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 10),
@@ -67,9 +72,17 @@ class SmartHome extends StatelessWidget {
           ),
           SizedBox(height: 20,),
           CentreComponent(),
-          BottomComponent(statusText1: "Speed",  statusText2: "20Mb/s", statusIcon: FontAwesomeIcons.wifi),
-          BottomComponent(statusText1: "Humidity",  statusText2: "60%", statusIcon: FontAwesomeIcons.leaf),
-          SizedBox(height: 10),
+          BottomComponent(
+            statusText1: "Speed",  
+            statusText2: "20Mb/s", 
+            statusIcon: FontAwesomeIcons.wifi
+          ),
+          BottomComponent(
+            statusText1: "Humidity",  
+            statusText2: "60%", 
+            statusIcon: FontAwesomeIcons.leaf
+          ),
+          SizedBox(height: 5),
           Container(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
