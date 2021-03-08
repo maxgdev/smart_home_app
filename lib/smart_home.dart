@@ -70,8 +70,9 @@ class SmartHome extends StatelessWidget {
               ),
             ],)
           ),
-          SizedBox(height: 20,),
+          SizedBox(height: 40,),
           CentreComponent(),
+          SizedBox(height: 20,),
           BottomComponent(
             statusText1: "Speed",  
             statusText2: "20Mb/s", 
@@ -83,25 +84,29 @@ class SmartHome extends StatelessWidget {
             statusIcon: FontAwesomeIcons.leaf
           ),
           SizedBox(height: 5),
-          Container(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text("Current Temperature",
-                  style: GoogleFonts.lato(
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 15),
+            child: Container(
+              alignment: Alignment.centerLeft,
+              child: Column(
+                // mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text("Current Temperature",
+                    style: GoogleFonts.lato(
+                        color: Colors.black.withOpacity(.6),
+                        fontSize: 15.0,
+                        fontWeight: FontWeight.w800)
+                  ),
+                  Text("20 ℃", 
+                    style: GoogleFonts.lato(
                       color: Colors.black.withOpacity(.6),
                       fontSize: 15.0,
-                      fontWeight: FontWeight.w800)
-                ),
-                Text("20 ℃", 
-                  style: GoogleFonts.lato(
-                    color: Colors.black.withOpacity(.6),
-                    fontSize: 15.0,
-                    fontWeight: FontWeight.bold)
-                ),
-              ],
-            )
+                      fontWeight: FontWeight.bold)
+                  ),
+                ],
+              )
+            ),
           ),
         ],
       ),
