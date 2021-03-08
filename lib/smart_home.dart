@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
+import './bottom_widget.dart';
 
 class SmartHome extends StatelessWidget {
 
@@ -28,26 +30,26 @@ class SmartHome extends StatelessWidget {
           Container(
             child: Placeholder(),
           ),
-          Container(child: Row(children: [
-            Icon(FontAwesomeIcons.leaf),
-            Column(children: [
-              Text("Humidity"),
-              Text("60%"),
-            ],)
-          ],)),
-          Container(child: Row(children: [
-            Icon(FontAwesomeIcons.leaf),
-            Column(children: [
-              Text("Humidity"),
-              Text("60%"),
-            ],)
-          ],)),
+          BottomComponent(statusText1: "Speed",  statusText2: "20Mb/s", statusIcon: FontAwesomeIcons.wifi),
+          BottomComponent(statusText1: "Humidity",  statusText2: "60%", statusIcon: FontAwesomeIcons.leaf),
+          SizedBox(height: 10),
           Container(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text("Current Temperature"),
-                Text("20 ℃"),
+                Text("Current Temperature",
+                  style: GoogleFonts.lato(
+                      color: Colors.black.withOpacity(.6),
+                      fontSize: 15.0,
+                      fontWeight: FontWeight.w800)
+                ),
+                Text("20 ℃", 
+                  style: GoogleFonts.lato(
+                    color: Colors.black.withOpacity(.6),
+                    fontSize: 15.0,
+                    fontWeight: FontWeight.bold)
+                ),
               ],
             )
           ),
